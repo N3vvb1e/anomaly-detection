@@ -1,15 +1,17 @@
-## Setup
-
+Setup
+Create a virtual environment:
 python -m venv venv
 
-# Activate:
+Activate the environment:
+On Windows:
+.\venv\Scripts\activate
 
-# Windows: .\venv\Scripts\activate
+On macOS/Linux:
+source venv/bin/activate
 
-# macOS/Linux: source venv/bin/activate
+Install dependencies:
 
-pip install -r lab1/requirements.txt # change to labN as needed
+pip install -r lab1/requirements.txt
 
-## Run
-
+Run
 python lab1/ex1.py
