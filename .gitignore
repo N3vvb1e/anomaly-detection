@@ -1,0 +1,21 @@
+# virtual envs
+venv/
+.env/
+.venv/
+
+# bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# editors/OS
+.vscode/
+.idea/
+.DS_Store
+
+# outputs
+*.png
+outputs/
