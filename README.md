@@ -1,23 +1,51 @@
-Setup
+# ECOD Experiment Replication
 
-Create a virtual environment:
+Partial replication of experiments from **"ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions"**.
 
-python -m venv venv
+---
 
-Activate the environment:
+## 📁 Files
 
-On Windows:
+### Python Scripts
 
-.\venv\Scripts\activate
+**`experiment2_interpretation.py`** - Replicates Experiment 2 (Interpretability)
+- Analyzes Sample 70 from BreastW dataset using ECOD
+- Computes dimensional outlier scores via ECDF tail probabilities
+- Generates dimensional outlier graph showing which features contribute to anomaly detection
+- Output: `dimensional_outlier_graph.png`
 
-On macOS/Linux:
+**`experiment3_runtime.py`** - Replicates Experiment 3 (Runtime Performance)
+- Benchmarks ECOD vs. IForest, KNN, and LOF
+- Tests scalability with varying sample sizes (n) and dimensions (d)
+- Outputs: `runtime_scalability.png`, `runtime_n.csv`, `runtime_d.csv`
 
-source venv/bin/activate
+### Data Files
 
-Install dependencies:
+**`4_breastw.npz`** - Breast Cancer Wisconsin dataset (features `X`, labels `y`)
 
-pip install -r lab1/requirements.txt
+**`runtime_n.csv`** - Runtime results for varying sample sizes
 
-Run
+**`runtime_d.csv`** - Runtime results for varying dimensions
 
-python lab1/ex1.py
+---
+
+## 🚀 Usage
+
+```bash
+# Install dependencies
+pip install numpy pandas matplotlib scipy pyod
+
+# Run experiments
+python experiment2_interpretation.py
+python experiment3_runtime.py
+```
+
+---
+
+## 📖 Reference
+
+```
+Li, Z., Zhao, Y., Botta, N., Ionescu, C., & Hu, X. (2022).
+ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions.
+IEEE Transactions on Knowledge and Data Engineering.
+```
